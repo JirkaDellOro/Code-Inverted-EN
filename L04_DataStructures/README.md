@@ -1,6 +1,6 @@
 # L04_DataStructures
 <img src="Material/OrdnungChaos.jpg">
-<small>Quelle: <a href="https://gutezitate.com/zitate-bilder/zitat-ordnung-ist-etwas-fur-primitive-das-genie-beherrscht-das-chaos-albert-einstein-181618.jpg">https://gutezitate.com/zitate-bilder/zitat-ordnung-ist-etwas-fur-primitive-das-genie-beherrscht-das-chaos-albert-einstein-181618.jpg</a></small>
+<small>Source: <a href="https://gutezitate.com/zitate-bilder/zitat-ordnung-ist-etwas-fur-primitive-das-genie-beherrscht-das-chaos-albert-einstein-181618.jpg">https://gutezitate.com/zitate-bilder/zitat-ordnung-ist-etwas-fur-primitive-das-genie-beherrscht-das-chaos-albert-einstein-181618.jpg</a></small>
 
 Albert Einstein was undoubtedly one of the greatest geniuses humanity has ever produced. It is unlikely to offend anyone if, in this lesson, we assume that none of the people involved enjoys a similar status. This probably applies to most of those involved in designing interactive applications, and perhaps even more to the users of these applications. So anyone who does not claim Einstein’s genius for themselves might still benefit from order.
 
@@ -8,7 +8,7 @@ Albert Einstein was undoubtedly one of the greatest geniuses humanity has ever p
 
 ## Separation Of Concerns
 Just as undisputed as Einstein’s genius is the principle of Separation of Concerns (SoC) in software development. This principle is about ensuring that each part of the overall software has a clear responsibility that is separated from the responsibilities of the other parts. This responsibility should be describable in a short sentence. If the word “and” appears in that sentence, something may be wrong, and that part has been assigned too many responsibilities. For the cocktail bar, we have already done many things right, especially if we look at it from a very high-level perspective and consider the basic separation required for developing web applications.
-- [x] Work through this short [Artikel in SelfHTML.org](https://wiki.selfhtml.org/wiki/HTML/Tutorials/Trennung_von_Inhalt,_Pr%C3%A4sentation_und_Verhalten). Compare it with your own work and check whether you have taken everything into account.
+- [x] Work through this short [article in SelfHTML.org](https://wiki.selfhtml.org/wiki/HTML/Tutorials/Trennung_von_Inhalt,_Pr%C3%A4sentation_und_Verhalten). Compare it with your own work and check whether you have taken everything into account.
 
 The CSS part of the cocktail bar affects only the visual design and does not add any content or interaction possibilities. The script deals exclusively with evaluating the interaction. The HTML file provides the structure of the page and the interaction elements and serves as the data source... oops, there are quite a few **AND**s in there. And that is where things will soon start to grind.
 
@@ -35,7 +35,7 @@ Besides the principle of “Divide et impera”, it is generally a very good app
 
 <img src="Material/AdaLovelace.jpg" align="right"/>
 
-- **FunFact**: Many sources attribute the first algorithm ever designed for a computer to Lady Ada Lovelace (1815–1852). The associated mechanical computer, the “Analytical Engine”, could not yet be built in a functional way at that time. But Ada’s algorithm worked! In her honor, more than a century later, a popular programming language was named “Ada”.
+- **FunFact**: many sources attribute the first algorithm ever designed for a computer to Lady Ada Lovelace (1815–1852). The associated mechanical computer, the “Analytical Engine”, could not yet be built in a functional way at that time. But Ada’s algorithm worked! In her honor, more than a century later, a popular programming language was named “Ada”.
 
 The design of algorithms and data structures thus forms the basis for the subsequent programming. Starting the programming without this foundation is an erratic approach and, for more complex applications, usually leads to increased effort and inferior solutions.
 
@@ -96,7 +96,7 @@ If we now look at the code in the HTML file, the script, and the data file, we n
 
 
 ## JSON (JavaScript Object Notation)
-Of course, this solution is not necessarily the ultimate wisdom when it comes to keeping the menu maintainable for the bartender. Because of the specification of the`namespace` and the declaration as well as the assignment operator `let data: Data = `  is still a script file, and if the bartender handles it incorrectly, they can easily render the program unusable. Without these specifications, however, it would already be a valid JSON file, and in the next lessons it will be explained how to work with it and how to use pure JSON as a data and data transfer format.
+Of course, this solution is not necessarily the ultimate wisdom when it comes to keeping the menu maintainable for the bartender. Because of the specification of the `namespace` and the declaration as well as the assignment operator `let data: Data = `  is still a script file, and if the bartender handles it incorrectly, they can easily render the program unusable. Without these specifications, however, it would already be a valid JSON file, and in the next lessons it will be explained how to work with it and how to use pure JSON as a data and data transfer format.
 Interestingly, JSON is now also used extensively outside the JavaScript world in completely different kinds of applications. In the meantime it has established itself as a competitor to **XML (Extensible Markup Language)**, whose structure also underlies HTML, and in terms of public interest—at least as far as can be determined using Google Trends—has overtaken XML since spring 2016.
 
 <img src="Material/XMLvsJSON.png">  
