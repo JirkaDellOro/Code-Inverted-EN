@@ -1,7 +1,7 @@
 # L12_Addition
 
 <a href="https://www.youtube.com/watch?v=PK_yguLapgA"><img src="Material/Ariane5Failure.jpg"/></a>
-<small>Quelle: https://docplayer.net/docs-images/66/55611304/images/11-0.jpg</small>
+<small>Source: https://docplayer.net/docs-images/66/55611304/images/11-0.jpg</small>
 
 - [x] Click the image to see how a minor software bug caused 290 million euros to go up in smoke.
 
@@ -212,7 +212,7 @@ Branches allow multiple versions of the same repository to be stored simultaneou
 This system enables community-based open-source development without requiring team members to work within a fixed structure—or even know one another. Anyone can create a clone (**fork**) of a public repository in their own GitHub space and work on it. If something useful for the original project emerges, a "pull request" containing the changes can be submitted. The original project's developers can then review these changes and "merge" them into their repository if appropriate.
 
 ## Platforms
-The technical foundation used for this "Development of Interactive Applications" module series is based on web technologies. However, this does not mean your concepts must be limited to websites. With what you have learned so far, you can design and develop fully-fledged native apps and desktop programs. To do this, you employ techniques that elevate your software to an extended platform; while a browser and/or Node continues to operate in the background, the user remains unaware of this.
+The technical foundation used for this "Development of Interactive Applications" module series is based on web technologies. However, this does not mean your concepts must be limited to websites. With what you have learned so far, you can design and develop full-fledged native apps and desktop programs. To do this, you employ techniques that elevate your software to an extended platform; while a browser and/or Node continues to operate in the background, the user remains unaware of this.
 
 ### Electron
 Developed by GitHub itself, it uses Node.js and Chromium—the developer version of the Chrome browser. Its capabilities are extended to include system functions such as file system access, allowing your web app to become a full-fledged native desktop application for Windows, Mac, and Linux.
@@ -229,7 +229,7 @@ Since 2015, another model has been poised to shake up the app market: Progressiv
 
 The mobile Twitter client is a Progressive Web App.
 
-# Abschluss
+# Conclusion
 <div align="center">
   <a href="http://hdl.handle.net/10900.3/OER_GZLPLYRR"><img src="../X01_Appendix/Img/L12_V1_Bild.jpg" width="25%"/></a>
   <br>  
