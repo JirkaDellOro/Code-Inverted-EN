@@ -1,5 +1,5 @@
 ## L02 Events
-# L02.1 Grundlagen
+# L02.1 Basics
 [<img src="Material/EventInfo_Child2Parent.png">](https://www.youtube.com/watch?v=IHbQdC5VHfw)
 <small>Quelle: <a href="https://www.youtube.com/watch?v=IHbQdC5VHfw">https://www.youtube.com/watch?v=IHbQdC5VHfw</a></small>
 
