@@ -22,7 +22,7 @@ Object-oriented modeling offers several additional capabilities that simplify an
 
 ## `Abstract`
 ### Abstract class
-No objects are instantiated from the `Moveable` class in Asteroids—only from its subclasses. `Moveable` is thus a purely abstract class; like "dog," it represents merely a concept or an idea (compare Plato's theory of forms). A class can be designated as such using the reserved keyword `abstract`. Any attempt to instantiate an object of this class will now be flagged by the TypeScript compilerS.  
+No objects are instantiated from the `Moveable` class in Asteroids—only from its subclasses. `Moveable` is thus a purely abstract class; like "dog," it represents merely a concept or an idea (compare Plato's theory of forms). A class can be designated as such using the reserved keyword `abstract`. Any attempt to instantiate an object of this class will now be flagged by the TypeScript compiler.  
 
 - [x] Mark your superclass as abstract by simply writing `abstract` before `class`. Try to create an object of the class in the main program and observe the error messages.
 
@@ -42,12 +42,12 @@ Such methods in abstract classes should also be marked as `abstract`. This elimi
 ## Static
 The principle of static class methods and properties works in the opposite direction. They can be used without the need to create an instance of the class; in this way, the class—or a part of it—becomes very concrete. To achieve this, one simply needs to prefix the method or property declaration with the reserved word `static`.
 
-In the case of *Asteroids*, static methods within the vector class could prove useful. The following line from `isHit`, for example, is rather inelegant
+In the case of *Asteroids*, static methods within the Vector class could prove useful. The following line from `isHit`, for example, is rather inelegant
 
 ```typescript 
 let difference: Vector = new Vector(_hotspot.x - this.position.x, _hotspot.y - this.position.y);
 ```
-It would be more readable if the vector class could calculate the difference between two vectors and return the resulting vector. This is easy to implement in the vector class
+It would be more readable if the Vector class could calculate the difference between two vectors and return the resulting vector. This is easy to implement in the Vector class
 
 ```typescript
 static getDifference(_v0: Vector, _v1: Vector): Vector
@@ -56,7 +56,7 @@ static getDifference(_v0: Vector, _v1: Vector): Vector
 }
 
 ```
-The complexity of creating a new vector and performing component-wise subtraction is now encapsulated within the vector class, and the new class method `getDifference` can be used simply and intuitively.
+The complexity of creating a new vector and performing component-wise subtraction is now encapsulated within the Vector class, and the new class method `getDifference` can be used simply and intuitively.
 ```typescript
 let difference: Vector = Vector.getDifference(_hotspot, this.position);
 ```
@@ -91,7 +91,7 @@ Such blocks can define the boundaries of loop bodies, `if` blocks, function or m
 ## Visibility
 Multiple scopes exist side-by-side and nested within one another. Confusion can easily arise particularly when access is required from one scope to another, such as when the main Asteroid program accesses the properties or methods of "Moveable" objects. This is because classes and objects expose some information as an interface for external access, while other information is required solely for internal functionality; attempting to access the latter can lead to errors.
 
-In object oriented modeling, visibility modifiers can be used to protect properties and methods from unauthorized access. This not only enhances security but also makes it much easier for team members to identify and select the appropriate access points during development. These modifiers are simply reserved words placed before the declaration of methods and properties.
+In object-oriented modeling, visibility modifiers can be used to protect properties and methods from unauthorized access. This not only enhances security but also makes it much easier for team members to identify and select the appropriate access points during development. These modifiers are simply reserved words placed before the declaration of methods and properties.
 
 ### `public`
 Access is completely public. This is also the default visibility if no modifier is specified. That is why Asteroids was able to work as it did. An analogy would be a front yard that anyone can walk into and where anyone can handle the items found there.
@@ -142,10 +142,10 @@ set value(_newValue: number): void {
 
 Now, for instance, when the statement `instance.value = 59;` is executed, this setter method is automatically called, and the value on the right-hand side of the assignment operator—in this case, `59`—is passed as a parameter. The same applies to combined assignment operators (see appendix). Note that the class no longer contains a property named `value`, as this would cause a naming conflict with the setter. Therefore, in this example, the internal attribute is named `valuePrivate`. However, viewed from the "outside," `instance` possesses a property named `value` that now incorporates special functionality and cannot be modified in an uncontrolled manner.
 
-- [x] The vector class already has a `set(...)` method. Is this a "setter"?
+- [x] The Vector class already has a `set(...)` method. Is this a "setter"?
 
 ### `get`
-The counterpart to `set` is, of course, `get`. This allows, for example, the reading of a property that isn't stored but only calculated when requested. A candidate for such a "getter" could be the `length` attribute of the vector class. The length of a vector can be easily calculated using the Pythagorean theorem; JavaScript's `Math` object provides the `hypot` method for this purpose. Since the elements of the vector are constantly changing, it would be unnecessary overhead to calculate and store the length with every change. With
+The counterpart to `set` is, of course, `get`. This allows, for example, the reading of a property that isn't stored but only calculated when requested. A candidate for such a "getter" could be the `length` attribute of the Vector class. The length of a vector can be easily calculated using the Pythagorean theorem; JavaScript's `Math` object provides the `hypot` method for this purpose. Since the elements of the vector are constantly changing, it would be unnecessary overhead to calculate and store the length with every change. With
 
 ```typescript
 get length(): number {
@@ -203,7 +203,7 @@ If the watchdog's `update` method is now executed cyclically, different activiti
 
 - [x] What might the corresponding activities look like? Create rough activity diagrams for them.
 
-Without the specific enumeration type, `task` might simply be of type `number`. In that case, you would have tasks 0, 1, 2, and 3, and would need to track elsewhere which number corresponds to which task. Furthermore, numbers for which no task is defined would also be valid a scenario practically inviting errors. Alternatively, `task` could be of type `string`, assigned values ​​like `"sleep"`, `"watch"`, and so on. While this makes the program readable again, it is highly error prone, as typos such as `"petrol"` can easily creep in.
+Without the specific enumeration type, `task` might simply be of type `number`. In that case, you would have tasks 0, 1, 2, and 3, and would need to track elsewhere which number corresponds to which task. Furthermore, numbers for which no task is defined would also be valid a scenario practically inviting errors. Alternatively, `task` could be of type `string`, assigned values ​​like `"sleep"`, `"watch"`, and so on. While this makes the program readable again, it is highly error-prone, as typos such as `"petrol"` can easily creep in.
 
 By using an enumeration type, however, TypeScript can offer the correct suggestions while you write the code, present the valid values ​​for selection, and detect errors immediately.
 
