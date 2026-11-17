@@ -1,7 +1,7 @@
 ## L02 Events
-# L02.1 Grundlagen
+# L02.1 Basics
 [<img src="Material/EventInfo_Child2Parent.png">](https://www.youtube.com/watch?v=IHbQdC5VHfw)
-<small>Quelle: <a href="https://www.youtube.com/watch?v=IHbQdC5VHfw">https://www.youtube.com/watch?v=IHbQdC5VHfw</a></small>
+<small>Source: <a href="https://www.youtube.com/watch?v=IHbQdC5VHfw">https://www.youtube.com/watch?v=IHbQdC5VHfw</a></small>
 
 <!-- 
 ## Rückblick DOM
@@ -25,7 +25,7 @@ Diese Knoten enthalten die Kernfunktionalität zur Bildung des Graphen und damit
 -->
 
 ## Events
-The DOM provides a system for interacting with the user: the event system. It very conveniently supplies information about events within the application, without requiring any knowledge of the hardware. The operating system and the browser already evaluate these events and present the information in a general, standardized form.
+The DOM provides a system for interacting with the user: the event system. It very conveniently supplies information about events within the application, without requiring any knowledge of the hardware. The operating system and the browser already evaluate these events and present the information in a general form.
 
 ### Event Object
 Events are special objects that carry information about an occurrence. Such an occurrence can be a mouse click, a key press, a touch on the screen, the loading of a file, the completion of a data transfer, and much more.
@@ -57,11 +57,11 @@ For the system to know which handler should be called for which event, the handl
 ```typescript
 document.addEventListener("click", handleClick);
 ```
-The first parameter is the string that describes the event type, the second is a reference to the handler. When the document object receives an event object of type "click", that event object is passed on to the handler function `handleClick`. The `document`-Object now listens to the system; an “ear” called a listener has been installed on it.
+The first parameter is just the string that describes the event type, the second is a reference to the handler. When the document object receives an event object of type "click", that event object is passed on to the handler function `handleClick`. The `document`-Object now listens to the system; an “ear” called a listener has been installed on it.
 >**Attention:** A common mistake in JavaScript is to pass a function call instead of a function reference, for example `addEventListener("click", handleClick())`. The extra parentheses cause the function to be called immediately during installation, and whatever it returns is then installed as the handler reference.
 
 ### Example
-The following is probably the simplest example we can show using the event system:
+The following is the most primitive example we can show using the event system:
 ```typescript
 namespace L02_Load {
     window.addEventListener("load", handleLoad);
@@ -73,8 +73,8 @@ namespace L02_Load {
 ```
 Here, the `window`-Object, which corresponds to the browser tab in which the application runs, is instructed to call the function `handleLoad` when a load event occurs, and to pass the corresponding event object to it. handleLoad then simply outputs the object to the console.
 - [x] Examine the `event`-Object that is logged.
-- [x] Research the `load`-Event, wwhen exactly is it fired? What is the difference compared to `DOMContentLoaded`?
-- [x] Install the listener on the `document`object instead of the `window`-object. What happens now?
+- [x] Research the `load`-Event, when exactly is it fired? What is the difference compared to `DOMContentLoaded`?
+- [x] Install the listener on the `document` object instead of the `window`-object. What happens now?
 - [x] Experiment in the same way with `DOMContentLoaded`. How does the system behave now?
 
 > **Note:** To delay the execution of a script, the HTML attribute `defer` is now also available. However, it is good practice and helps avoid side effects to continue working with the load-related events.
@@ -141,8 +141,8 @@ Next, you create a sketch of the appearance of the application. This will alread
 </div>
 
 ## Activity Diagrams
-At this point, you have already captured the key activities, the involved elements, and the events to be evaluated from the user’s perspective. Now you switch to the system’s perspective and define how it should operate. For this, you now use activity diagrams. Each event serves as a signal reception that starts an activity.
-Begin again with an overview of the activities. Then, take each activity in turn and refine it. Repeat this process until you arrive at atomic actions that can be implemented directly as program statements. At first, you will probably need to research these statements.  
+At this point, you have already captured the key activities, the involved elements, and the events to be evaluated from the user’s perspective. Now you switch to the system’s perspective and define how it should operate. For this, you now use activity diagrams. Each event serves as a signal reception and represents a start node for an activity.
+Begin again with an overview of the activities. Then, take each activity in turn and refine it. Repeat this process until you arrive at atomic actions that can be implemented as program statements. At first, you will probably need to research these statements.  
 <div align="center">
   <a href="http://hdl.handle.net/10900.3/OER_HFILWFPA"><img src="../X01_Appendix/Img/L02_V3_Bild.JPG" width="25%"/></a>
   <a href="Material/BlackmailerCompanion_ActivityDiagram.jpg"><img src="Material/BlackmailerCompanion_ActivityDiagram.jpg" width="25%"/></a>
@@ -180,4 +180,4 @@ Keep in mind that you can and should improve your conceptual design at any time 
 - [x] Extend the ransom note app so that it can also be used on smartphones
   - In an additional area, all permitted letters should be available for selection so that they can be activated by touch
   - The currently selected letter should be highlighted in this selection so that the user knows what they have chosen before changing the note
-- Note: Research the Pointer Event
+- Note: Research the Pointer-Event
