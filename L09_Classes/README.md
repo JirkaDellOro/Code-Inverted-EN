@@ -1,8 +1,8 @@
 ## L09 Classes
-# L09.1 Grundlagen
+# L09.1 Basics
 <img src="Material/Alan-kay.jpg">  
 
-<small>Quelle: https://www.thepositiveencourager.global/alan-kay-on-creativity-3</small>
+<small>Source: https://www.thepositiveencourager.global/alan-kay-on-creativity-3</small>
 
 As the son of a scientist and an artist, Alan Kay never distinguished between art and science. While earning a living as a jazz guitarist and guitar teacher, he obtained a bachelor's degree in mathematics and molecular biology, a master's degree in electrical engineering, and a Ph.D. in computer science. He played a pivotal role in coining the term "object-oriented programming."
 
