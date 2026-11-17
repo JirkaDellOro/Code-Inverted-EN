@@ -7,7 +7,7 @@
 ### [L00_Preface](L00_Preface) 
 <small style="float: right; position: relative; top: -30px; height: 0px">Week 1 | 1:15 | 1:00</small>
 - Motivation
-- (Veranstaltungskonzept)?
+- Course Design
 - Tips
 <hr/>
 
@@ -37,7 +37,7 @@
 - Custom-Events <!-- #### [Teil 2: Ereignisgesteuerte Anwendung](L02_Events#l021-ereignisgesteuerte-anwendung) -->
 - Use-Case-Diagram
 - UI-Scribble 
-- Activity diagramm
+- Activity diagram
 - Iterative working method   
 <hr/>
 
@@ -80,7 +80,7 @@
 - NoSQL-databases
 - MongoDB
 - MingiDB
-- Cocktail bar: Database Conncetion
+- Cocktail bar: Database Connection
 <hr/>
 
 ### [L08_Canvas](L08_Canvas) 
