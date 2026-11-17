@@ -9,7 +9,7 @@
 In 1987, Barbara Liskov presented a core concept of object-oriented modeling at a conference. According to this concept, an object of a class should be replaceable by an object of a subclass of that class without requiring changes to the program using the object. In 1993, together with Jeannette Wing, she formalized what is now known as the **Liskov Substitution Principle**.
 
 With regard to dogs, the Liskov Substitution Principle can be illustrated as follows:
-If dogs can generally bark, then subclasses of `Dog`—such as `Great Dane`, `Chihuahua`, and `Poodle` can also bark. So, if you ring the doorbell of a house displaying a "Beware of Dog" sign, you can assume that a dog will bark. The sign does not need to say "Beware of Poodle," even if the dog inside happens to be a poodle.  
+If dogs can generally bark, then subclasses of `Dog`—such as `Great Dane`, `Chihuahua`, and `Poodle`—can also bark. So, if you ring the doorbell of a house displaying a "Beware of Dog" sign, you can assume that a dog will bark. The sign does not need to say "Beware of Poodle," even if the dog inside happens to be a poodle.  
 
 `Poodle` is a specialization of `Dog`; `Dog` is the generalization of `Poodle`.  
 
@@ -22,7 +22,7 @@ In biology, classification involves classes, races, species, genera, families, o
 
 The superclass represents the generalization of a subclass, and the subclass a specialization of the superclass.
 
-In a class diagram, arrows with an open triangular arrowhead point from the subclass to its superclass, thereby representing this relationship. The digression into biology mentioned above which, incidentally, does not stand up to scientific scrutiny could be represented in a class diagram as follows.  
+In a class diagram, arrows with an open triangular arrowhead point from the subclass to its superclass, thereby representing this relationship. The digression into biology mentioned above, which, incidentally, does not stand up to scientific scrutiny, could be represented in a class diagram as follows. 
 
 ![](Material/draw.io/Dogs_ClassDiagram.svg)
 
@@ -36,7 +36,7 @@ In this context, the term "inheritance" is also used. A superclass passes on all
 
 > **Inheritance** is the third principle of object-orientation!
 
-Due to the inheritance relationship, superclasses are sometimes referred to as parent classes and subclasses as child classes. However, this leads to confusion, as certain runtime relationships between objects—such as those in the DOM are already designated as parent-child relationships. Other terms include upper and lower class, base and derived class, among others. In this course, the terms "superclass" and "subclass" will continue to be used exclusively.
+Due to the inheritance relationship, superclasses are sometimes referred to as parent classes and subclasses as child classes. However, this leads to confusion, as certain runtime relationships between objects—such as those in the DOM—are already designated as parent-child relationships. Other terms include upper and lower class, base and derived class, among others. In this course, the terms "superclass" and "subclass" will continue to be used exclusively.
 
 ## Modeling rules
 A circus animal trainer must know not only the characteristics of each dog breed in his troupe but even those of every individual animal. The clerk at the spaceport of a modern planet, on the other hand, needed only to know whether a life form was a mammal in order to assign it to the right room. ([see Ijon Tichy, Episode 2, 4:23 – 5:33](https://www.youtube.com/watch?v=_DSCXsIR03Q))
@@ -69,7 +69,7 @@ Asteroids is being further developed with the above-mentioned principles in mind
 
 > **`extends`** extends a superclass with a subclass!
 > **`super(...)`** calls the superclass constructor from the subclass!  
-> **`super.methode(...)`** calls the superclass's `methode` from the subclass!
+> **`super.method(...)`** calls the superclass's `method` from the subclass!
 
 ## Polymorphism
 Greek *polýs* means "much" or "many," and *morphé* means "form" or "shape." Dogs come in a wide variety of forms—a topic already covered extensively in these lessons. However, individual dog breeds not only look different but may also behave differently. Upon seeing a flock of sheep, a hunting dog might be inclined to rush in and bring one down, whereas a herding dog would be more likely to circle the flock and keep it together. For someone walking these dogs—such as the estimated 200,000 professional dog walkers in the USA—the primary concern is having enough leashes and collars to keep the dogs under control. The breed is irrelevant.
@@ -129,7 +129,7 @@ moveables.push(new Projectile(new Vector(0, 0), new Vector(0, 0)));
 
 - [x] Design the UFOs! In doing so, you must make the following design decision, among others:
   - Who is supposed to generate the projectiles? Will this task be handled by the UFOs or by the main program?
-    - In the case of the UFO: how do the projectiles get into the moveable array to be managed?
+    - In the case of the UFO: how do the projectiles get into the Moveable array to be managed?
     - In the case of the main program: how does the main program detect that the UFO is firing a projectile? 
 
 >**Note:** The path for drawing the UFOs is already generated by the `createUfoPath()` function. 
