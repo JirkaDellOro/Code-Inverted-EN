@@ -1,18 +1,18 @@
 # L01 Recap & Foundation
 <a href="https://www.youtube.com/watch?v=BRTOlPdyPYU"><img src="Material/steve-jobs-learn-to-program.jpg">
-<small>Quelle: <a href="https://www.challengecharterschool.net/wp-content/uploads/2017/07/Steve-Jobs.jpg">https://www.challengecharterschool.net/wp-content/uploads/2017/07/Steve-Jobs.jpg</a></small>
+<small>Source: <a href="https://www.challengecharterschool.net/wp-content/uploads/2017/07/Steve-Jobs.jpg">https://www.challengecharterschool.net/wp-content/uploads/2017/07/Steve-Jobs.jpg</a></small>
 
 ## Introduction
 In this chapter, you will solidify some fundamental and familiar concepts and likely learn a few new ones as well. A deep understanding of these, and the ability to use them confidently, is a prerequisite for the subsequent chapters. You will also be introduced to the activity diagrams of the "Unified Modeling Language" (UML 2.5), which you will use later in the course to describe and design algorithms. Furthermore, you will learn to use trace tables and the browser's built-in debugger—important tools for troubleshooting during the implementation of the applications you have designed.
 
 ## Errors
-> "Aargh! My Program is no longer running, even though i didn´t so anything!"  
+> "Aargh! My program is no longer running, even though I didn't do anything!"  
 
 We all know that feeling, you are not alone. Pay attention to the following rules:
 1. don't panic!
 1. the computer is rather uncreative and simply follows your instructions. There is likely nothing wrong with it or with other software, such as the browser, and it can help you locate the error. It is tireless in this regard and won't hold anything against you.
-1.  Gather information about the problem—don't just randomly change things. Instead, examine the behavior. Make use of the numerous helpful features the computer can display for you. Apply the [Lösungstrategien](#l%C3%B6sungsstrategien) solution strategies!
-2. If you haven't solved the problem after 15 minutes, call the lecturer or a tutor! otherwise you will lose too much time… if there is no one in the room, write a issue. post the gathered information and links to your program, both on "Pages" for trying things out and on the code. Important: You need to be clear about exactly what you were planning to do. Have your concept ready!
+1.  Gather information about the problem—don't just randomly change things. Instead, examine the behavior. Make use of the numerous helpful features the computer can display for you. Apply the [solution strategies!](#l%C3%B6sungsstrategien)
+2. If you haven't solved the problem after 15 minutes, call the lecturer or a tutor! Otherwise you will lose too much time… if there is no one in the room, write an issue. Post the gathered information and links to your program, both on "Pages" for trying things out and on the code. Important: You need to be clear about exactly what you were planning to do. Have your concept ready!
 
 >**Note:** One of TypeScript’s major strengths is error prevention, by flagging many errors at development time. JavaScript has almost nothing to offer here; the errors only show up during operation—especially at the user's end!
 
@@ -38,7 +38,7 @@ Logical errors are not attributable to incorrect programming, but rather to poor
 1. Commenting out and uncommenting: Convert individual lines into comments one after the other (Windows: Strg+#, Mac: ⌘+K ⌘+U) and observe how the program behavior changes. Or turn entire blocks of code into a comment and uncomment individual lines one by one to turn them back into code. See when the error appears or disappears.
 1. Generate useful Output at various points using `console.log(...)`. Based on the sequence of outputs, you can identify the program execution flow and, if applicable, specific memory states.
 1. Trace the program execution with the debugger, This allows you to track down even the most stubborn bugs. Use Step-In, Step-Over, and Step-Out.
-1. Use the **Gummientenmethode** for logic problems—also used by professionals. Not a Joke! Place a rubber duck nearby, a stuffed animal or a roommate will do, have them nearby and look at your code together. Explain to them in detail, how your code works. There is a good chance that you will find the logical error together. Rubber ducks are very smart!
+1. Use the **Rubber Duck Method** for logic problems—also used by professionals. Not a Joke! Place a rubber duck nearby, a stuffed animal or a roommate will do, and look at your code together. Explain to them in detail how your code works. There is a good chance that you will find the logical error together. Rubber ducks are very smart!
 
 ### Preventive Measures
 You can ensure while coding that errors don't occur in the first place, or that you can quickly find their causes.
@@ -77,7 +77,7 @@ What is still missing is the **Definition** of `v` so that this variable has a v
 >**Attention:** 
 > Very important: `=` does not mean "is equal to" as you know it from math; instead, it is an instruction to evaluate the right-hand side and assign the result to the left-hand side. Hence the name "assignment operator".
 
-- [x] Write `v = 1` into the browser console and let the program line run again. what happens now?  
+- [x] Write `v = 1` into the browser console and let the program line run again. What happens now?  
 
 The complete program, including a line for console output, therefore looks like this:
 ```typescript
@@ -141,21 +141,21 @@ console.log(v);
 In addition to simple data types such as `number`, `boolean` and `string` there are also complex data types. You can simply think of these as collections of information. This information can be of a primitive type, but can also itself be of a complex type. In the second case, you have a collection of collections. You can nest this to any depth.  
 A distinction can be made between homogeneous data structures, in which the managed information units are all of the same type, and heterogeneous ones, in which different data types are managed. A further distinction is made based on the different ways in which information is addressed. This can be done via an index—that is, a number indicating the position of the information within a sequence—or via a key that is associated with the information and serves as the means of access. Typically, this key is of type `string`, though other types are also possible. Finally, a distinction can be made between predefined keys and those generated at runtime.
 ### Array
-An array is a data structure in which the contained information—referred to as elements—is addressed using indices. In JavaScript, arrays are inherently heterogeneous. An array can be created using the `[ ]` or `new Array()` A comma-separated list of elements can be specified within the brackets at the time of creation.
+An array is a data structure in which the contained information—referred to as elements—is addressed using indices. In JavaScript, arrays are inherently heterogeneous. An array can be created using the `[ ]` or `new Array()`. A comma-separated list of elements can be specified within the brackets at the time of creation.
 
 - [x] Write `let a = [7, true, "Hello"]` into the console. Display `a` and try to access individual elements using the syntax `a[index]` replacing `index` with a number. What happens if you use a number less than 0 or greater than 2?
 - [x] Enter `a[4] = [101, 102]`. What do you see now when you output the array—specifically at a[3] and a[4]?
 
 So, you can throw all sorts of things into the array at any position—even other arrays (resulting in the aforementioned collection of collections). With TypeScript, however, the range of element types can be restricted to ensure homogeneity, thereby reducing a significant source of errors.
 ```typescript
-let a: number[] = [7, true, "Hallo"];
+let a: number[] = [7, true, "Hello"];
 ```
 In the example above, an error is displayed immediately because the values ​​at positions 1 and 2 are not of type `number`. Only the 7 at position 0 is acceptable.
 
 ### Associative Array
 In an associative array, elements are linked to so-called keys. Such an associative array is typically created using curly braces, with key-value pairs able to be specified directly within the braces. The association is represented by the colon `:`.
 
-- [x] Now write  `let s = {"zahl": 7, "wahr": true, text: "Hallo"}`into the console. Output  `s` and try to access individual elements using bracket syntax `s["key"]` and dot syntax `s.key` , where you replace `key` with the string representing the key. What happens if you use an unknown key here?
+- [x] Now write  `let s = {"zahl": 7, "wahr": true, text: "Hello"}` into the console. Output  `s` and try to access individual elements using bracket syntax `s["key"]` and dot syntax `s.key` , where you replace `key` with the string representing the key. What happens if you use an unknown key here?
 - [x] Enter `s[4] = [101, 102]`. What do you see now when you display the array? What is the significance of the number 4 now, and how do you specifically access the information associated with it?
 
 ### Type definitions and aliases
@@ -203,7 +203,7 @@ students.push({name: "Big Brain", matrikel: 123456, grades: {"Code1": 1.3, "Code
 
 ## Function
 A function is a piece of code within a program that constitutes a small program in its own right; it has its own name and can process input data and generate output data. Such a function can then be used by other parts of the program by calling its name along with the data to be processed. If the function returns data, it can, for example, simply be assigned to a variable using the assignment operator `=` and is thus available for further processing.  
-You define a function using the keyword `function` , followed by a name of your choice and a list of parameters in parentheses. Together, this constitutes the so-called signature. Then follows the function body, containing the actual code, enclosed in curly braces. If the function is to return a value, it is specified after the keyword `return`.
+You define a function using the keyword `function`, followed by a name of your choice and a list of parameters in parentheses. Together, this constitutes the so-called signature. Then follows the function body, containing the actual code, enclosed in curly braces. If the function is to return a value, it is specified after the keyword `return`.
 
 - [x] Write  
 `function isDivisible(dividend, divisor) {return (dividend % divisor == 0)}`
@@ -221,7 +221,7 @@ This JavaScript function is very error-prone, for instance, it returns a result 
     return result;
   }
 ```  
-Here, each of the parameters has been assigned a type annotation, so TypeScript will complain if the function is called with values ​​of a type other than `number`. It is also specified that the function should return a Boolean value for this purpose, the signature has been extended with the annotation`boolean`.
+Here, each of the parameters has been assigned a type annotation, so TypeScript will complain if the function is called with values ​​of a type other than `number`. It is also specified that the function should return a Boolean value for this purpose, the signature has been extended with the annotation `boolean`.
 
 > **Notice:** In other programming languages, it is common for the signature as a whole to identify a function. Thus, a program can contain two functions with the same name that include completely different code, provided they differ in their parameter lists. In JavaScript/TypeScript, that is not the case. Here, only the name matters, so it must be unique.
 
