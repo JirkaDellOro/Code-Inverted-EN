@@ -1,7 +1,7 @@
 ## L08 Canvas
 # L08.1 Grundlagen
 <img src="Material/bobross.jpg"/>
-<small>Quelle: <a href="http://pix4.qmde.de/www.quotenmeter.de/pics/sonstiges/2019/medien/bobross_ox__W1000xh0.jpg">http://pix4.qmde.de/www.quotenmeter.de/pics/sonstiges/2019/medien/bobross_ox__W1000xh0.jpg</a></small>  
+<small>Source: <a href="http://pix4.qmde.de/www.quotenmeter.de/pics/sonstiges/2019/medien/bobross_ox__W1000xh0.jpg">http://pix4.qmde.de/www.quotenmeter.de/pics/sonstiges/2019/medien/bobross_ox__W1000xh0.jpg</a></small>  
 
 Standardized HTML elements greatly simplify the design of web applications, and form elements even support complex interactions in a format already familiar to most users. However, this imposes significant limitations on design possibilities. Furthermore, common methods of presenting information—such as charts—cannot be generated at runtime using these elements. That is where the `HTMLCanvasElement` comes in!
 > **FunFact:** "Canvas" can mean a tarpaulin, a sail, or an awning... but also an artist's canvas.
@@ -49,7 +49,7 @@ crc2.stroke();
 ### Ellipse
 For a long time, it was necessary to represent ellipses as distorted circles or to approximate them using curves. However, there is now an `ellipse` command as well.
 
-- [x] Finde heraus, wie die Ellipse funktioniert...
+- [x] Find out how the ellipse works...
 
 ### Line segments
 You can extend a path with line segments using the `moveTo(...)` and `lineTo(...)` commands. A line is defined solely by its end position, while the start position is the end position of the preceding command.
@@ -129,9 +129,9 @@ Transformations offer a solution here. Instead of respecifying coordinates and d
 
 The transformations are performed sequentially, and each subsequent transformation modifies the result of the preceding one. In fact, there is only a single transformation matrix representing the entire chain of transformations. This matrix is ​​modified each time `translate(...)`, `rotate()`, or `scale()` is called. When a path is created or drawn, the composite matrix is ​​applied to the coordinates using simple matrix multiplication.
 This means that repeated transform calls accumulate in the matrix, which is generally undesirable. There are several approaches to solving this problem:
-- restore the overall matrix to its original state using `resetTransform()`
+- Restore the overall matrix to its original state using `resetTransform()`
 - Save the current state of the overall matrix using `save()`, and restore this state later using `restore()`. `save()` can be called multiple times; the saved states are restored in reverse order using `restore()`.
-- You can save the current state of the overall matrix using `save()` and restore it later using `restore()`. `save()` can be called multiple times; the saved states are restored in reverse order via `restore()`. Alternatively, you can save the current state of the overall matrix using `getTransform()` and assign it to a variable of type `DOMMatrix`; this state is then restored using `setTransform(...)` with that variable as the parameter.  
+- Save the current state of the overall matrix using `getTransform()` and assign it to a variable of type `DOMMatrix`; this state is then restored using `setTransform(...)` with that variable as the parameter.
 
 ## Style
 ### Color
@@ -139,10 +139,10 @@ The CanvasRenderingContext can process color specifications as strings, just lik
 
 | Format       | string                                   |
 |--------------|------------------------------------------------|
-| Hexadezimal  | #FA8072                                        |
+| Hexadecimal  | #FA8072                                        |
 | RGB          | RGB( 250, 128, 114 ) oder RGB( 98%, 50%, 45% ) |
 | HSL          | HSL( 6, 93%, 71% )                             |
-| Predefiniert | salmon                                         |
+| Predefined | salmon                                         |
 
 RGB and HSL also allow (when referred to as RGBA and HSLA) a fourth parameter opacity (alpha)—specified as a floating point number between 0 and 1. Additionally, the less precise notation using only three hexadecimal digits is also possible.
 
