@@ -1,11 +1,11 @@
 # L05_Client
 <img src="Material/ZitsFaceToFace.jpg">  
-<small>Quelle: <a href="https://arnoldzwicky.org/category/these-modern-times/page/3/">https://arnoldzwicky.org/category/these-modern-times/page/3/</a></small>
+<small>Source: <a href="https://arnoldzwicky.org/category/these-modern-times/page/3/">https://arnoldzwicky.org/category/these-modern-times/page/3/</a></small>
 
 The cocktail bar already works quite well as it is, but there is still one major drawback: the order is not yet being sent. As long as the bartender is not sitting next to the customer while they are putting together their cocktail, the business will be lost. However, this situation does not match the use cases we are considering and makes the system obsolete anyway.
 Therefore, the web page that is displayed by the customer’s browser on their computer must communicate with another computer that receives the order, processes it, and finally communicates it to the bartender. If necessary, it should also provide feedback about the processing, which in turn is received by the customer’s browser and displayed to them.
 
-- [x] Read this short [Wikipedia-Artikel](https://de.wikipedia.org/wiki/Client-Server-Modell) to clarify some basic terms of the client–server model.
+- [x] Read this short [Wikipedia-article](https://de.wikipedia.org/wiki/Client-Server-Modell) to clarify some basic terms of the client–server model.
 
 ## Use Case Diagram
 In fact, the cocktail bar already uses a client–server system as soon as it is published on GitHub Pages. Pages acts as a file server and delivers the HTML, CSS, and JS files that a browser can interpret. The browser acts as the client, and it does not matter on which computer it runs, as long as it can communicate with the server via an internet connection.
@@ -40,7 +40,7 @@ For this reason, asynchronous communication has become established. The communic
 This makes it possible for websites, for example, to build up the display and provide interaction while further data are being loaded. Or to send data during interaction with the user.
 
 ## Forms
-HTML forms already offer the possibility of sending data synchronously completely without additional programming. For this, it is only necessary to add an `action` and a `method` attribute to the form tag and to integrate a submit button in the form. The `action`value specifies the URL to which the data should be sent. The data themselves, i.e. the values of the form elements, are automatically prepared and sent when the submit button is pressed. How they are sent depends on the chosen `method`.
+HTML forms already offer the possibility of sending data synchronously completely without additional programming. For this, it is only necessary to add an `action` and a `method` attribute to the form tag and to integrate a submit button in the form. The `action` value specifies the URL to which the data should be sent. The data themselves, i.e. the values of the form elements, are automatically prepared and sent when the submit button is pressed. How they are sent depends on the chosen `method`.
 ### Get
 With `method="get"`, the data are simply appended to the URL in plain text as strings, separated by a `?`. The key–value pairs are separated from each other by `&` (et, ampersand), the keys and values are connected by `=`. The browser then calls this URL including the appendix, the complete string appears in the address bar.
 
@@ -96,7 +96,7 @@ That is why the new keywords `async` and `await` were implemented in JavaScript 
 The `async` keyword declares a function as asynchronous, meaning its execution can be paused and resumed at a later time. This is precisely what the `await` keyword does; consequently, it only makes sense to use it within asynchronous functions. Once `fetch` is initiated, the `communicate` function pauses, and program execution continues with the statement immediately following the function call. However, once `fetch` completes, execution of `communicate` resumes at the statement following the `fetch` call. This means that the main program—provided it has not yet finished running—is interrupted to handle outputting the response to the console. Afterward, `communicate` reaches its conclusion, and the main program resumes. However, the function could contain further `await` statements that trigger similar behavior. In this way, processing the response further does not result in code bloat caused by callbacks. 
 - [x] Copy the asynchronous code above and embed it in a new program. Have the main program call the `communicate` function with the parameter "https://jirkadelloro.github.io/Code-Inverted/L05_Client/Material/Test.txt". Have the strings "Start" and "End" printed to the console before and after the call to `communicate`.
 - [x] Now run the program after implementing it so that it is executable. Describe your observations. In what order does the output appear in the console?
-- [x] The returned response object is complex, and the actual content of the server response is not yet visible. Extend the `communicate` function by adding a line that calls the text() method on the response object. Note that text() returns a Promise; however, if you use `await` here as well, the final result will be a string that you can assign to a variable of type string. Then, output the content of the server response.
+- [x] The returned response object is complex, and the actual content of the server response is not yet visible. Extend the `communicate` function by adding a line that calls the text() method on the response object. Attention: text() returns a Promise; however, if you use `await` here as well, the final result will be a string that you can assign to a variable of type string. Then, output the content of the server response.
 
 ## Uniform Resource Locator (URL)
 You now have a few tools at your disposal to initiate synchronous or asynchronous communication from the client side—that is, to send a request and receive a response from the server. So far, we have only considered the GET method, where the payload is embedded in the URL string. This step still needs to be implemented for asynchronous communication. To do this, we should first examine the structure of the URL in more detail.
@@ -105,7 +105,7 @@ You now have a few tools at your disposal to initiate synchronous or asynchronou
 <small>Quelle: <a href="https://nodejs.org/dist/latest-v12.x/docs/api/url.html#url_url_strings_and_url_objects">https://nodejs.org/dist/latest-v12.x/docs/api/url.html#url_url_strings_and_url_objects</a></small>  
 
 ### Part 1
-Protocol, authentication, and host are required to establish a connection to a server. However, simply specifying the hostname, such as www.hs-furtwangen.de,is often sufficient to enable communication between the browser and the server. 
+Protocol, authentication, and host are required to establish a connection to a server. However, simply specifying the hostname, such as www.hs-furtwangen.de, is often sufficient to enable communication between the browser and the server. 
 > Presenting hostnames in this fully written-out format is intended to assist human users. In reality, the browser first establishes a connection to a name server and queries it for the address associated with that name.  
 - [x] Enter a "real" address in the browser's address bar: 141.28.2.12
 
@@ -174,7 +174,7 @@ There are various ways to solve the submit button problem.
 </ul>
 </details>
 
-## Reload data
+## Load additional data
 `fetch` and the insights gained in this chapter can also be used to solve the problem left over from the previous chapter: completely separating the bartender's menu data from the program code. Just as was done earlier with the file Test.txt, a file server can provide the contents of a file as a string, and the client can then process that response. In the last chapter, the `data` variable was defined directly within the code—meaning the data existed as a literal within the source code itself. This made it easy to access the data using dot or bracket notation and to leverage its hierarchical structure. However, when the information is received merely as a string within the response, it is desirable to convert it into an associative array as well.
 
 ### JSON-Object
@@ -188,7 +188,7 @@ For this purpose, JavaScript provides the JSON object, which makes it easy to cr
 <a href="http://hdl.handle.net/10900.3/OER_CRBMCJPT"><img src="../X01_Appendix/Img/video.jpg" width="3%"/> L05 Client: Diagrams</a>
 </div>
 
-> **Notice:** The video uses the term "marker," but the correct term according to the UML standard is "connector.""
+> **Notice:** The video uses the term "marker," but the correct term according to the UML standard is "connector."
 
 ## Implementation II
 
