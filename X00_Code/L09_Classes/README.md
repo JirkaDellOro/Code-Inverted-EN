@@ -1,7 +1,7 @@
 # Asteroids
-- Pfad für Asteroid
-- Einen Asteroiden animieren mit Vector-Objekten für Position und Speed
-- move- und draw-Methoden bauen
-- viele Asteroiden fliegen lassen
-- drei Asteroidentypen definieren -> weitere Pfade
-- type-Attribute aufnehmen
+- Path for an asteroid
+- Animate an asteroid using Vector objects for position and speed
+- Build move and draw methods
+- Have many asteroids flying around
+- Define three asteroid types -> additional paths
+- Add type attributes
