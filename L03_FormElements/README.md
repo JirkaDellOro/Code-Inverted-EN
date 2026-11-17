@@ -1,7 +1,8 @@
 # L03 FormElements
 <img src="Material/PassierscheinA38.png">
-<small>Quelle: <a href="https://mueli77.com/2016/12/11/asterix-review-special-45-12-pruefungen-fuer-asterix/">https://mueli77.com/2016/12/11/asterix-review-special-45-12-pruefungen-fuer-asterix/</a></small>
+<small>Sources: <a href="https://mueli77.com/2016/12/11/asterix-review-special-45-12-pruefungen-fuer-asterix/">https://mueli77.com/2016/12/11/asterix-review-special-45-12-pruefungen-fuer-asterix/</a></small>
 
+# L03.1 Overview
 Interaction has been a core aspect of HTML from the very beginning. The World Wide Web is based on the idea of linking scientific documents with interactive references, the links. The focus was only much later shifted to cat videos.
 
 > Fun fact: Tim Berners Lee ([GitHub profile](https://github.com/timbl)) developed HTML, HTTP, URLs, the first web server and the first browser in the early 1990s. You can get an impression of what it felt like back then in an interactive way here: [WWW](http://line-mode.cern.ch/www/hypertext/WWW/TheProject.html)
@@ -13,7 +14,7 @@ In this chapter you will get to know the most important elements, learn how to u
 > - [x] Get the code [L03_FormElements/Overview](https://github.com/JirkaDellOro/Code-Inverted/tree/master/X00_Code/L03_FormElements/Overview) from the appendix running locally. In this lesson you will gradually enable and examine its functionality. At first only the heading "Form-Elements" appears.
 
 ## Text Input
-The most important input option is text. Using keyboard events, you could intercept every character as you type and build up a string, but there is a much simpler way. The generic `input` element already provides this basic functionality in its default form as a text field, and it can do much more.
+The most important input option is text. Using keyboard event, you could intercept every character as you type and build up a string, but there is a much simpler way. The generic `input` element already provides this basic functionality in its default form as a text field, and it can do much more.
 > Example: <input type="text" placeholder="Type something here" required/>
 
 ### Placeholder
@@ -23,7 +24,7 @@ The `placeholder` attribute can be assigned a value that can serve, for example,
 The value "password" for the `type` attribute ensures that the input is not shown and cannot be copied. 
 
 ### Validation
-For example, specifying "email" or "url" as the value for the `type` attribute already performs a simple validation of the entered string to detect obvious input errors and show that the value is invalid. If the ‘valueless’ attribute `required` is specified, it additionally indicates that input is mandatory.The visual appearance can be adjusted using CSS and the pseudo-selectors  `:invalid`, `:valid` and `:required`. 
+For example, specifying "email" or "url" as the value for the `type` attribute already performs a simple validation of the entered string to detect obvious input errors and show that the value is invalid. If the ‘valueless’ attribute `required` is specified, it additionally indicates that input is mandatory. The visual appearance can be adjusted using CSS and the pseudo-selectors  `:invalid`, `:valid` and `:required`. 
 Much more complex validation can be performed using regular expressions, which however requires some expertise. For this, the `pattern` attribute is used to define the regular expression to be applied. In the example, exactly 3 digits are required.
 
 ### Textarea
@@ -31,7 +32,7 @@ A larger variant of the `input` element is `textarea`. Here, longer texts can be
 
 ### Exercises
 > - [x] Now activate in the HTML file the fieldset with the `id` "fsText". To do this, remove the surrounding comment markers`<!--` and `-->`. The easiest way is to select the whole block and then press `Ctrl+#` (Mac: ⌘+K ⌘+U). Save the file.
-> - [x] The fieldset labeled "Text-Input"should now appear when you reload the file in the browser. Check how the elements behave and trace how this behavior comes about. Keep in mind that no script is running yet. 
+> - [x] The fieldset labeled "Text-Input" should now appear when you reload the file in the browser. Check how the elements behave and trace how this behavior comes about. Keep in mind that no script is running yet. 
 > - [x] Now activate the script "FormElements.js"  in the HTML file. Continue interacting with the elements and observe the output in the console. When is the `input` event dispatched, and when is `change` dispatched?
 > - [x] Examine the code in the file FormElements.ts and clarify how it works.
 
@@ -39,7 +40,7 @@ A larger variant of the `input` element is `textarea`. Here, longer texts can be
 Very often, the user should be able to choose between different options without entering text. For this, the options must be presented and a clear way of interacting must be offered. HTML provides various elements and element types for this.
 
 ### Datalist
-With datalist, a text field can be assigned a list of predefined entries. The user can select such an entry via pointer interaction or restrict the selection by typing on the keyboard. However, they can still enter arbitrary free text and ignore the selection. The connection between `input` and `datalist`is made via the attributes `list`and `id`.  
+With datalist, a text field can be assigned a list of predefined entries. The user can select such an entry via pointer interaction or restrict the selection by typing on the keyboard. However, they can still enter arbitrary free text and ignore the selection. The connection between `input` and `datalist` is made via the attributes `list`and `id`.  
 
 ### Radiobutton
 Example: <input type="radio" name="radio"><input type="radio" name="radio" checked><input type="radio" name="radio">  
@@ -49,7 +50,7 @@ This type is specifically designed for single‑choice selections. All `input` e
 Example: <input type="checkbox"><input type="checkbox" checked><input type="checkbox" id="c3">  
 `input` elements of type `checkbox`, on the other hand, are typically used for multiple‑choice selections.
 
-> **Attention:** Radio buttons and checkboxes usually refer to a text next to them. For the user, it is very annoying if this relationship is not used to support interaction—i.e. if they cannot click the text to interact. It is extremely easy to take this into account: the text just has to be wrapped in a `label`tag. The connection between `label` and `input`is then made via the attributes `for` and `id`. This should **always** be implemented!
+> **Attention:** Radio buttons and checkboxes usually refer to a text next to them. For the user, it is very annoying if this relationship is not used to support interaction—i.e. if they cannot click the text to interact. It is extremely easy to take this into account: the text just has to be wrapped in a `label` tag. The connection between `label` and `input` is then made via the attributes `for` and `id`. This should **always** be implemented!
 
 ### Select
 Example: <select name="Select" id="select">
@@ -80,7 +81,7 @@ There are also a few standardized elements that provide feedback to the user. Th
 - [x] Activate the last fieldset, it has the `id` "fsOutput". 
 - [x] Also activate the last code fragments. Explain how the output elements are controlled/addressed. 
 
-# Cocktail Bar 
+# L03.2 Cocktail Bar 
 
 <img src="Material/CocktailBar.png"/>
 
@@ -157,7 +158,7 @@ for (let entry of formData.entries()) {
     console.log("value: " + entry[1]);
 }
 ```
-Each `entry` object is thus a small array with two entries: at position 0 a string containing the value of the`name` attribute of the original form element, and at position 1 the corresponding value of the `value` attribute. The latter is of the type `FormDataEntryValue`, a somewhat special string, and may need to be converted.
+Each `entry` object is thus a small array with two entries: at position 0 a string containing the value of the `name` attribute of the original form element, and at position 1 the corresponding value of the `value` attribute. The latter is of the type `FormDataEntryValue`, a somewhat special string, and may need to be converted.
 
 ## Implementation II
 
@@ -170,7 +171,7 @@ Each `entry` object is thus a small array with two entries: at position 0 a stri
 
 > Attention:   
 > - In the video, the term FormData element is used several times. It is better to say FormData object, because it is not an HTML element.
-> - In the video, the shorter form `for (let entry of formData)` is also used, which is allowed. However, the version given above, `for (let entry of formData.entries())`is cleaner.
+> - In the video, the shorter form `for (let entry of formData)` is also used, which is allowed. However, the version given above, `for (let entry of formData.entries())` is cleaner.
 
 - [x] The output of the order overview does not yet work correctly. Find the error and fix it.
 - [x] Implement the special handling of the drinks.
