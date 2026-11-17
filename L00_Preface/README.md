@@ -1,6 +1,6 @@
 # L00_Preface  
 > **Notice:** 
-> - EIA2 was a module within the Media Design study program. The instructional videos originate from this module and are being reused for Code 1 and 2. Therefore, there are occasional references to structures such as "workshops," which now underpin the overall concept of the Games & Immersive Media degree program.
+> - EIA2 was a module within the Media Design study program. The instructional videos originate from this module and are being reused for Code 1 and 2. Therefore, there are occasional references to structures such as "workshops," which now underpin the overall design of the Games & Immersive Media degree program.
 
 ## Motivation  
 - [x] Click on the play icons and watch the videos. They give you an insight into the opportunities this course opens up for you if you actively participate, and they convey the urgency of the material. Step out of the role of passive consumer and become a doer! You stand at a crossroads: Master machines or be mastered.
@@ -34,10 +34,10 @@ In the “Theory 1” module, you had already been introduced to fundamental pri
 
 
 ## Outlook??(ausblick)
-In “Code 1” and “Code 2,” you will learn how to tackle even complex tasks, with a focus on a systematic approach. A good design is required before proceeding to its implementation via code. To this end, you will use diagram types from the Unified Modeling Language (UML) to gain insight into problems and devise solutions. Your subsequent implementations using TypeScript merely serve as proof of a successful design. Without a concept, it is pointless to start coding…
+In “Code 1” and “Code 2,” you will learn how to tackle even complex tasks, with a focus on a systematic approach. A good design is required before proceeding to its implementation via code. To this end, you will use diagram types from the Unified Modeling Language (UML) to gain insight into problems and devise solutions. Your subsequent implementations using TypeScript merely serve as proof of a successful design. Without a design, it is pointless to start coding…
 
-The following activity diagram illustrates the Concept process.  
-[Activity Diagram - Konzeption](../X01_Appendix/UML/AD_Konzeption.svg)  
+The following activity diagram illustrates the design process.  
+[Activity Diagram - Design](../X01_Appendix/UML/AD_Konzeption.svg)  
 
 - [x] Examine the diagram. Can you already grasp what it conveys? All the symbols are standardized and hold specific meanings, yet the general relationships may already be intuitively apparent. This course also aims to enable you to draw such diagrams yourself—correctly and meaningfully.
 
